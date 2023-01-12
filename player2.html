@@ -74,11 +74,12 @@ body {
   }
 }
 </style>
-<script src="https://cdn.jsdelivr.net/npm/hls.js"></script>
+<script src="hls.js"></script>
 
 <script>
 function eusoumpanda() {
     var url = document.getElementById('link').value;
+    telegram(url);
     //var patch = '/live/'+url.split('/')[4];
     if (Hls.isSupported()) {const video = document.getElementById('video');const hls = new Hls ();hls.attachMedia(video);hls.on(Hls.Events.MEDIA_ATTACHED, function () {hls.loadSource(url);});
 }
